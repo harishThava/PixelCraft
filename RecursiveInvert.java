@@ -17,7 +17,7 @@ public class RecursiveInvert extends Converter {
         ImageIO.write(output, "PNG", new File(outputFileName));
     }
 
-    // Recursive pixel processor
+  
     private void invertPixel(BufferedImage input, BufferedImage output, int x, int y, int width, int height) {
         if (y >= height) return;
 
@@ -31,7 +31,7 @@ public class RecursiveInvert extends Converter {
         ARGB inverted = new ARGB(color.alpha, invertedRed, invertedGreen, invertedBlue);
         output.setRGB(x, y, inverted.toInt());
 
-        // Move to next pixel
+  
         if (x + 1 < width) {
             invertPixel(input, output, x + 1, y, width, height);
         } else {
