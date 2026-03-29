@@ -8,7 +8,6 @@ public class Darken extends Converter {
     public void convert(String inputFileName, String outputFileName) throws IOException {
         File input = new File(inputFileName);
         BufferedImage original = ImageIO.read(input);
-
         int width = original.getWidth();
         int height = original.getHeight();
         BufferedImage output = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
