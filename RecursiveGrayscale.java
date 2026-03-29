@@ -17,7 +17,7 @@ public class RecursiveGrayscale extends Converter {
         ImageIO.write(output, "PNG", new File(outputFileName));
     }
 
-    // Recursive method to process one pixel at a time
+   
     private void convertPixel(BufferedImage input, BufferedImage output, int x, int y, int width, int height) {
         if (y >= height) return; // done
 
@@ -27,7 +27,7 @@ public class RecursiveGrayscale extends Converter {
         ARGB gray = new ARGB(color.alpha, avg, avg, avg);
         output.setRGB(x, y, gray.toInt());
 
-        // Move to next pixel
+
         if (x + 1 < width) {
             convertPixel(input, output, x + 1, y, width, height);
         } else {
