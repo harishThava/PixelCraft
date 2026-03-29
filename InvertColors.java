@@ -19,7 +19,7 @@ public class InvertColors extends Converter {
                 int pixel = original.getRGB(x, y);
                 ARGB color = new ARGB(pixel);
 
-                // Invert each RGB value (alpha stays the same)
+                
                 int invertedRed = 255 - color.red;
                 int invertedGreen = 255 - color.green;
                 int invertedBlue = 255 - color.blue;
