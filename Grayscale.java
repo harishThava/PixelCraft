@@ -14,7 +14,6 @@ public class Grayscale implements Converter {
             System.out.println("ImageIO.read() returned null — file may be unreadable or in an unsupported format.");
             return;
         }
-
         int width = image.getWidth();
         int height = image.getHeight();
 
