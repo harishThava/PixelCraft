@@ -19,7 +19,7 @@ public class RecursiveGrayscale extends Converter {
 
    
     private void convertPixel(BufferedImage input, BufferedImage output, int x, int y, int width, int height) {
-        if (y >= height) return; // done
+        if (y >= height) return; 
 
         int pixel = input.getRGB(x, y);
         ARGB color = new ARGB(pixel);
